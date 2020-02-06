@@ -1,0 +1,20 @@
+#!/usr/bin/praat
+
+form Parameters
+	word inFile
+	real minPitch 60.0
+	real maxPitch 400.0
+endform	
+Read from file... 'inFile$'
+To Pitch... 0.005 'minPitch' 'maxPitch'
+numberOfFrames = Get number of frames
+for iframe to numberOfFrames
+   pitch = Get value in frame... iframe Hertz
+   if pitch = undefined
+      pitch = -1e+10
+   else 
+      pitch = ln(pitch)
+   endif
+   printline 'pitch:3'
+endfor
+exit
