@@ -2,6 +2,9 @@
 INPUTFILES=$(wildcard input/*.wav)
 OUTPUTFILES=$(patsubst input/%.wav,cmp/%.cmp,$(INPUTFILES)) $(patsubst input/%.wav,tg/%.TextGrid,$(INPUTFILES))
 
+SPTKPATH=bin/
+#SPTKPATH=/home/timo/uni/experimente/070_voiceBuilding/sptk-target/bin/
+
 LOWERF0=60 # lower limit for f0 extraction (Hz)
 UPPERF0=180 # upper limit for f0 extraction (Hz)
 
@@ -19,13 +22,12 @@ STRFILTERNAME = filters/mix_excitation_5filters_99taps_16Kz.txt
 
 TCLSH = /usr/bin/tclsh
 BC    = /usr/bin/bc
-X2X     = /home/timo/uni/experimente/070_voiceBuilding/sptk-target/bin/x2x
-FRAME   = /home/timo/uni/experimente/070_voiceBuilding/sptk-target/bin/frame
-WINDOW  = /home/timo/uni/experimente/070_voiceBuilding/sptk-target/bin/window
-MGCEP   = /home/timo/uni/experimente/070_voiceBuilding/sptk-target/bin/mcep
-MINMAX  = /home/timo/uni/experimente/070_voiceBuilding/sptk-target/bin/minmax
-STEP    = /home/timo/uni/experimente/070_voiceBuilding/sptk-target/bin/step
-
+X2X     = $(SPTKPATH)/x2x
+FRAME   = $(SPTKPATH)/frame
+WINDOW  = $(SPTKPATH)/window
+MGCEP   = $(SPTKPATH)/mcep
+MINMAX  = $(SPTKPATH)/minmax
+STEP    = $(SPTKPATH)/step
 
 
 # filter taps filename for voicing stregths analysis in mixed excitation
@@ -69,7 +71,12 @@ cmp/%.cmp : mgc/%.mgc str/%.str lf0/%.lf0
 	paste mgc/$*.mgc str/$*.str lf0/$*.lf0 | awk 'NF==41' > $@
 
 tg/%.TextGrid : wav/%.wav input/%.txt
-	curl -s `curl -s -X POST -H 'content-type: multipart/form-data' -F SIGNAL=@wav/$*.wav -F LANGUAGE=deu-DE -F TEXT=@input/$*.txt 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUSBasic'|grep '<downloadLink>' |sed 's"^.*<downloadLink>"";s"</downloadLink>.*""'` > $@
+	# for German use:
+	# curl -s `curl -s -X POST -H 'content-type: multipart/form-data' -F SIGNAL=@wav/$*.wav -F LANGUAGE=deu-DE -F TEXT=@input/$*.txt 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUSBasic'|grep '<downloadLink>' |sed 's"^.*<downloadLink>"";s"</downloadLink>.*""'` > $@
+	# for English use:
+	curl -s `curl -s -X POST -H 'content-type: multipart/form-data' -F SIGNAL=@wav/$*.wav -F LANGUAGE=eng-US -F TEXT=@input/$*.txt 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUSBasic'|grep '<downloadLink>' |sed 's"^.*<downloadLink>"";s"</downloadLink>.*""'` > $@
+	# for Danish: you're on your own :-|
+
 
 clean : 
 	rm -f cmp/*.cmp lf0/*.lf0 mgc/*.mgc raw/*.raw wav/*.wav str/*.str tg/*.TextGrid
