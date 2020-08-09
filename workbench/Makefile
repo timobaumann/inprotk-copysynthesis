@@ -5,8 +5,8 @@ OUTPUTFILES=$(patsubst input/%.wav,cmp/%.cmp,$(INPUTFILES)) $(patsubst input/%.w
 SPTKPATH=bin/
 #SPTKPATH=/home/timo/uni/experimente/070_voiceBuilding/sptk-target/bin/
 
-LOWERF0=60 # lower limit for f0 extraction (Hz)
-UPPERF0=180 # upper limit for f0 extraction (Hz)
+LOWERF0=75 # lower limit for f0 extraction (Hz)
+UPPERF0=400 # upper limit for f0 extraction (Hz)
 
 SAMPFREQ    = 16000   # Sampling frequency (48kHz)
 FRAMELEN    = 400   # Frame length in point (1200 = 48000 * 0.025)
@@ -39,10 +39,19 @@ wav/%.wav : input/%.wav
 raw/%.raw : wav/%.wav
 	sox $< --bits 16 --encoding signed-integer --endian little $@
 
+# also add some padding because lf0 cannot be computed right from the start / windows are wider than for str.
 lf0/%.lf0 : wav/%.wav
-	scripts/praat ../$< $(LOWERF0) $(UPPERF0) > $@
+	echo "-10000000000.000\n-10000000000.000\n-10000000000.000\n-10000000000.000" > $@
+	scripts/praat ../$< $(LOWERF0) $(UPPERF0) >> $@
+	echo "-10000000000.000\n-10000000000.000\n-10000000000.000\n-10000000000.000" >> $@
 
-mgc/%.mgc : raw/%.raw
+# TODO: add 1 frame of padding before and after
+mgc/%.mgc : mgc/%.mgc-raw
+	head -1 $< > $@
+	cat $< >> $@
+	tail -1 $< >> $@
+
+mgc/%.mgc-raw : raw/%.raw
 	@echo "Extracting MGC coefficients from $*"
 	min=`$(X2X) +sf $< | $(MINMAX) | $(X2X) +fa | head -n 1`; \
 	max=`$(X2X) +sf $< | $(MINMAX) | $(X2X) +fa | tail -n 1`; \
@@ -55,7 +64,7 @@ mgc/%.mgc : raw/%.raw
 	fi
 
 str/%.str : raw/%.raw
-	echo "Extracting strengths from $*"; \
+	@echo "Extracting strengths from $*"; \
 	count=`echo "0.005 * $(SAMPFREQ)" | $(BC) -l`; \
 	$(STEP) -l `printf "%.0f" $${count}` | \
 	$(X2X) +fs > $*.tmp.head; \
