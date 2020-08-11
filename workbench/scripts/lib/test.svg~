@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="100%" style="stroke: black; stroke-width: 0.01; text-anchor: middle; font-size: 0.1;" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g >
+		<g transform="translate(0, 0)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="0.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="0.5" y="0.833333333333333"></text>
+			</g>
+		</g>
+		<g transform="translate(0, 1.2)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+		</g>
+		<g transform="translate(0, 2.4)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="2.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1.5" y="0.833333333333333"></text>
+			</g>
+		</g>
+		<g transform="translate(0, 3.6)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="2.015" y="0" />
+				<text style="stroke: none; " x="3" y="0.833333333333333">an</text>
+			</g>
+		</g>
+		<g transform="translate(0, 4.8)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="2.985" x="2.015" y="0" />
+				<text style="stroke: none; " x="3.5" y="0.833333333333333">ein</text>
+			</g>
+		</g>
+		<g transform="translate(0, 6)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="3.985" x="2.015" y="0" />
+				<text style="stroke: none; " x="4" y="0.833333333333333">eins</text>
+			</g>
+		</g>
+		<g transform="translate(0, 7.2)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="2.985" x="2.015" y="0" />
+				<text style="stroke: none; " x="3.5" y="0.833333333333333">eins</text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="5.015" y="0" />
+				<text style="stroke: none; " x="6" y="0.833333333333333">zwei</text>
+			</g>
+		</g>
+		<g transform="translate(0, 8.4)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="3.985" x="2.015" y="0" />
+				<text style="stroke: none; " x="4" y="0.833333333333333">eins</text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="6.015" y="0" />
+				<text style="stroke: none; " x="7" y="0.833333333333333">zwar</text>
+			</g>
+		</g>
+		<g transform="translate(0, 9.6)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="3.985" x="2.015" y="0" />
+				<text style="stroke: none; " x="4" y="0.833333333333333">eins</text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="2.985" x="6.015" y="0" />
+				<text style="stroke: none; " x="7.5" y="0.833333333333333">zwei</text>
+			</g>
+		</g>
+		<g transform="translate(0, 10.8)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="3.985" x="2.015" y="0" />
+				<text style="stroke: none; " x="4" y="0.833333333333333">eins</text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="3.985" x="6.015" y="0" />
+				<text style="stroke: none; " x="8" y="0.833333333333333">zwei</text>
+			</g>
+		</g>
+		<g transform="translate(0, 12)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="3.985" x="2.015" y="0" />
+				<text style="stroke: none; " x="4" y="0.833333333333333">eins</text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="2.985" x="6.015" y="0" />
+				<text style="stroke: none; " x="7.5" y="0.833333333333333">zwei</text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="2.985" x="8.015" y="0" />
+				<text style="stroke: none; " x="9.5" y="0.833333333333333"></text>
+			</g>
+		</g>
+		<g transform="translate(0, 13.2)">
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="1.985" x="0.015" y="0" />
+				<text style="stroke: none; " x="1" y="0.833333333333333"></text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="3.985" x="2.015" y="0" />
+				<text style="stroke: none; " x="4" y="0.833333333333333">eins</text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="2.985" x="6.015" y="0" />
+				<text style="stroke: none; " x="7.5" y="0.833333333333333">zwei</text>
+			</g>
+			<g >
+				<rect height="1" rx="0.05" ry="0.05" style="fill: none; " width="2.985" x="9.015" y="0" />
+				<text style="stroke: none; " x="10.5" y="0.833333333333333">drei</text>
+			</g>
+		</g>
+	</g>
+	<!-- 
+	Generated using the Perl SVG Module V2.59
+	by Ronan Oger
+	Info: http://www.roitsystems.com/
+ -->
+</svg>

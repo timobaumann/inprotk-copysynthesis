@@ -89,10 +89,9 @@ tg/%.TextGrid : wav/%.wav input/%.txt
 	# for Danish: you're on your own :-|
 
 maryxml/%.maryxml : tg/%.TextGrid lf0/%.lf0
-	TGtool.pl "load tg/$*.TextGrid" "savemaryxml $@ lf0/$*.lf0"
+	scripts/TGtool.pl "load tg/$*.TextGrid" "savemaryxml $@ lf0/$*.lf0"
 
-
-clean : 
+clean :
 	rm -f cmp/*.cmp lf0/*.lf0 mgc/*.mgc raw/*.raw wav/*.wav str/*.str tg/*.TextGrid
 
 all : $(OUTPUTFILES)
