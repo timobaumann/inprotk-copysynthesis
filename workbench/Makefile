@@ -39,18 +39,20 @@ wav/%.wav : input/%.wav
 raw/%.raw : wav/%.wav
 	sox $< --bits 16 --encoding signed-integer --endian little $@
 
-# also add some padding because lf0 cannot be computed right from the start / windows are wider than for str.
+# also add some padding because lf0 cannot be computed right from the start / windows are wider than for str
+# for simplicity, we'll pad with voiceless
 lf0/%.lf0 : wav/%.wav
 	echo "-10000000000.000\n-10000000000.000\n-10000000000.000\n-10000000000.000" > $@
 	scripts/praat ../$< $(LOWERF0) $(UPPERF0) >> $@
 	echo "-10000000000.000\n-10000000000.000\n-10000000000.000\n-10000000000.000" >> $@
 
-# TODO: add 1 frame of padding before and after
+# add 1 frame of padding before and after (by repeating first/last frames)
 mgc/%.mgc : mgc/%.mgc-raw
 	head -1 $< > $@
 	cat $< >> $@
 	tail -1 $< >> $@
 
+# actual mgc calculation (but without padding)
 mgc/%.mgc-raw : raw/%.raw
 	@echo "Extracting MGC coefficients from $*"
 	min=`$(X2X) +sf $< | $(MINMAX) | $(X2X) +fa | head -n 1`; \
@@ -85,6 +87,9 @@ tg/%.TextGrid : wav/%.wav input/%.txt
 	# for English use:
 	curl -s `curl -s -X POST -H 'content-type: multipart/form-data' -F SIGNAL=@wav/$*.wav -F LANGUAGE=eng-US -F TEXT=@input/$*.txt 'https://clarin.phonetik.uni-muenchen.de/BASWebServices/services/runMAUSBasic'|grep '<downloadLink>' |sed 's"^.*<downloadLink>"";s"</downloadLink>.*""'` > $@
 	# for Danish: you're on your own :-|
+
+maryxml/%.maryxml : tg/%.TextGrid lf0/%.lf0
+	TGtool.pl "load tg/$*.TextGrid" "savemaryxml $@ lf0/$*.lf0"
 
 
 clean : 

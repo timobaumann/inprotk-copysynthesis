@@ -5,13 +5,12 @@ import jdk.nashorn.api.scripting.URLReader;
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class FileBackedFullPStream extends FullPStream {
 
     BufferedReader csvReader;
-    List<FullPFeatureFrame> frames;
+    ArrayList<FullPFeatureFrame> frames;
     int index;
 
     public FileBackedFullPStream(String filename) throws IOException {
@@ -40,6 +39,10 @@ public class FileBackedFullPStream extends FullPStream {
     @Override
     public FullPFeatureFrame getFullFrame(int t) {
         return index < frames.size() ? frames.get(index++) : null;
+    }
+
+    public List<FullPFeatureFrame> getSpan(int start, int end) {
+        return frames.subList(start, end);
     }
 
     @Override

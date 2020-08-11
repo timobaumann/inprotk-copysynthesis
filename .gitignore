@@ -2,3 +2,9 @@ build/
 *.iml
 .idea/
 .gradle/
+workbench/tg/*
+workbench/cmp/*
+workbench/input/*
+workbench/lf0/*
+workbench/wav/*
+workbench/marytts/*
