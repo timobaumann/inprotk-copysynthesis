@@ -1,6 +1,6 @@
 # loosely based on HTS feature extraction Makefile as adapted for MaryTTS
 INPUTFILES=$(wildcard input/*.wav)
-OUTPUTFILES=$(patsubst input/%.wav,cmp/%.cmp,$(INPUTFILES)) $(patsubst input/%.wav,tg/%.TextGrid,$(INPUTFILES))
+OUTPUTFILES=$(patsubst input/%.wav,cmp/%.cmp,$(INPUTFILES)) $(patsubst input/%.wav,maryxml/%.maryxml,$(INPUTFILES))
 
 SPTKPATH=bin/
 #SPTKPATH=/home/timo/uni/experimente/070_voiceBuilding/sptk-target/bin/

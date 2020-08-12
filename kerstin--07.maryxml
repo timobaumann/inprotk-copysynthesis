@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maryxml xmlns="http://mary.dfki.de/2002/MaryXML" version="0.5" xml:lang="de"><phrase>
+<boundary breakindex='1' duration='1240'/>
+  <t>I<syllable>
+    <ph d='50' end='1.290000' p='aI'/>
+  </syllable></t>
+  <t>have<syllable>
+    <ph d='130' end='1.420000' p='h'/>
+    <ph d='60' end='1.480000' p='{' />
+    <ph d='30' end='1.510000' p='v' />
+  </syllable></t>
+  <t>a<syllable>
+    <ph d='50' end='1.560000' p='EI' />
+  </syllable></t>
+<boundary breakindex='1' duration='50'/>
+  <t>questionnaire<syllable>
+    <ph d='90' end='1.700000' p='k' />
+    <ph d='40' end='1.740000' p='w' />
+    <ph d='50' end='1.790000' p='E' />
+    <ph d='50' end='1.840000' p='s'  />
+    <ph d='120' end='1.960000' p='tS' />
+    <ph d='30' end='1.990000' p='@'  />
+    <ph d='50' end='2.040000' p='n'  />
+    <ph d='120' end='2.160000' p='E' />
+    <ph d='30' end='2.190000' p='r' />
+  </syllable></t>
+  <t>here<syllable>
+    <ph d='120' end='2.310000' p='h' />
+    <ph d='100' end='2.410000' p='i'/>
+    <ph d='200' end='2.610000' p='R' />
+  </syllable></t>
+<boundary breakindex='1' duration='110'/>
+  <t>which<syllable>
+    <ph d='40' end='2.760000' p='w'/>
+    <ph d='40' end='2.800000' p='I' />
+    <ph d='70' end='2.870000' p='tS'  />
+  </syllable></t>
+  <t>I<syllable>
+    <ph d='60' end='2.930000' p='aI' />
+  </syllable></t>
+  <t>would<syllable>
+    <ph d='90' end='3.020000' p='w'  />
+    <ph d='40' end='3.060000' p='U' />
+    <ph d='80' end='3.140000' p='d' />
+  </syllable></t>
+<boundary breakindex='1' duration='60'/>
+  <t>kindly<syllable>
+    <ph d='80' end='3.280000' p='k'/>
+    <ph d='80' end='3.360000' p='aI'/>
+    <ph d='90' end='3.450000' p='n' />
+    <ph d='30' end='3.510000' p='l'  />
+    <ph d='40' end='3.550000' p='i'  />
+  </syllable></t>
+  <t>ask<syllable>
+    <ph d='230' end='3.780000' p='{'  />
+    <ph d='70' end='3.850000' p='s' />
+    <ph d='40' end='3.890000' p='k' />
+  </syllable></t>
+  <t>you<syllable>
+    <ph d='70' end='3.960000' p='j' />
+    <ph d='120' end='4.080000' p='u'  />
+  </syllable></t>
+  <t>to<syllable>
+    <ph d='60' end='4.140000' p='t'/>
+    <ph d='70' end='4.210000' p='u' />
+  </syllable></t>
+  <t>fill<syllable>
+    <ph d='110' end='4.320000' p='f' />
+    <ph d='90' end='4.410000' p='I'  />
+    <ph d='30' end='4.440000' p='l' />
+  </syllable></t>
+  <t>out<syllable>
+    <ph d='180' end='4.620000' p='aU'  />
+    <ph d='150' end='4.770000' p='t'  />
+  </syllable></t>
+<boundary breakindex='1' duration='780'/>
+</phrase></maryxml>
