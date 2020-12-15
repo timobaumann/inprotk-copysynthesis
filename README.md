@@ -1,9 +1,8 @@
-#Incremental Copy Synthesis
+# Incremental Copy Synthesis
 A project that adds copy synthesis instead of actual text-to-speech synthesis to InproTK.
 In contrast to _plain_ audio files, copy synthesis can be influenced incrementally (i.e., change speed, prosody, etc.) just like all other incremental speech output from InproTK
 
-##Workflow and classes in InproTK: 
-
+## Workflow and classes in InproTK: 
 *Firstly*, synthesis can be effected from feature files that contain all parameters that need to be passed to the vocoder (one line per 5ms). See "Workbench" below on how these are created. There's demo code for this in test/java/; this is just the underlying technology for the main use-case.
 
 *Secondly*, for full-fledged incremental synthesis, the speech structure (phonemes, words, phrases) need to be available in addition to vocoding features (see above). These can be created from TextGrid files, which, in turn, can be created by an automatic alignment service (WebMAUS) -- you'll need internet access for the web service! 
