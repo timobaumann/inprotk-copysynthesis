@@ -28,7 +28,7 @@ The Makefile there can be used to turn all wavefiles in `input/` into feature fi
 * ensure that you start a system that uses InproTK with the `mary.version` property set as described above (if this yields errors that indicate that some service cannot be found, mail Timo)
 * instead of entering what you want to be synthesized as text, enter the file-URL prefix that, when extended with `.maryxml`/`.cmp` yields the corresponding files. 
 
-###DEPENDENCIES for running the workbench: 
+## DEPENDENCIES for running the workbench: 
  * sox 
  * praat in /usr/bin/praat
  * to install these dependencies on Ubuntu: `apt-get install sox praat`
@@ -37,4 +37,3 @@ The Makefile there can be used to turn all wavefiles in `input/` into feature fi
 
 # TODOS: 
  * test that aborting a sentence actually works (-:
- * integrate this with smoothplugin
